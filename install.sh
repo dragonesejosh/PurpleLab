@@ -56,16 +56,16 @@ echo -e "\n\e[32mAll checks passed. Continuing with the installation...\e[0m\n"
     apt install -y php libapache2-mod-php
     apt-get install -y php-curl
     apt-get install -y php-mysqli
-    apt install -y python3-pip
+    apt install -y pipx
     apt-get -y install p7zip-full
     apt-get -y install apt-transport-https
-    pip install pandas
-    pip install flask
-    pip install flask-cors
-    pip install loguru
-    pip install stix2
-    pip install mitreattack-python
-    pip install Flask-JWT-Extended
+    pipx install pandas
+    pipx install flask
+    pipx install flask-cors
+    pipx install loguru
+    pipx install stix2
+    pipx install mitreattack-python
+    pipx install Flask-JWT-Extended
     apt-get install -y libapache2-mod-ldap-userdir
     a2enmod ldap
     a2enmod authnz_ldap
@@ -479,7 +479,7 @@ rm -rf "$TEMP_CLONE_DIR"
 
 echo "The 'rules' folder has been successfully copied to $DEST_PATH"
 
-pip install sigma-cli
+pipx install sigma-cli
 sigma plugin install elasticsearch
 sigma plugin install splunk
 #sigma plugin install qradar -f
